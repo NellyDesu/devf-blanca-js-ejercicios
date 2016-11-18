@@ -16,6 +16,19 @@
     </div>
     <script>
         function calcular_max() {
+          var n1 = parseInt(document.querySelector("#numero1").value);
+          var n2 = parseInt(document.querySelector("#numero2").value);
+          var n3 = parseInt(document.querySelector("#numero3").value);
+
+          var maximo = max(n1, n2);
+          if (maximo < n3) {
+            maximo = n3
+
+          }
+
+
+
+
           /*
             Ejercicio: Copia tu función "max" del ejercicio 2 y pegarlo abajo
             de esta función (después del colchete de cierre). Termina esta
@@ -25,9 +38,20 @@
            */
 
           // Tu código acá!
+          var resultado = document.querySelector("#resultado");
+          resultado.innerHTML = "Max " + maximo;
         }
 
         // Pega tu función "max" acá:
+        function max(numero1, numero2){
+        var maximo;
+        if (numero1 > numero2) {
+          maximo = numero1;
+        }else{
+          maximo = numero2;
+        }
+        return maximo;
+      }
 
     </script>
   </body>
