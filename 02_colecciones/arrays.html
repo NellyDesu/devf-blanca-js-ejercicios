@@ -22,27 +22,49 @@
       var items = ["piedra", "papel", "tijera"];
    //              0        1        2
    //dibujar(items[2]);
-      var seleccion_maquina = items[0];
+      var seleccion_maquina = maquina_escoge(items);
       var seleccion_jugador = document.querySelector("#seleccion").value;
 
-      var ganador = definir_ganador(seleccion_jugador, seleccion_maquina);
-      dibujar(ganador);
+      var reglas = {
+        piedra: {papel: "pierde", tijera: "gana"},
+        papel: {tijera: "pierde", piedra: "gana"},
+        tijeras: {piedra: "pierde", papel: "gana"}
+      };
+
+      var ganador = definir_ganador(seleccion_jugador, seleccion_maquina, reglas);
+      dibujar("La maquina escogió: " +  seleccion_maquina + ", por lo tanto: " + ganador);
    }
 
-   function definir_ganador(s_jugador, s_maquina){
-     var resultado;
-     var items = ["piedra", "papel", "tijera"];
+   function definir_ganador(s_jugador, s_maquina, reglas){
+     //var resultado;
+     //var items = ["piedra", "papel", "tijera"];
      if (s_maquina == s_jugador) {
-       resultado = "empate";
-     } else if (s_jugador == items[1] ){
+       /*resultado*/
+       return "empate";
+     }
+     var regla = reglas[s_jugador];
+     return regla[s_maquina];
+    /* return ganador_sencillo(s_jugador, gana, pierde){
+       if(s_jugador == pierde){
+         return "Ganaste"
+       } else{
+         return "perdiste"*/
+     }
+
+     function maquina_escoge(items) {
+       var n_random = Math.floor(Math.random() * 3);
+       return items[n_random]
+
+
+     }
+
+     /*else if (s_jugador == items[1] ){
        resultado = "Ganaste";
      } else {
        resultado = "Perdiste";
      }
+     return resultado;*/
 
-
-     return resultado;
-   }
 
    function dibujar(valor) {
    document.querySelector("#resultado").innerHTML = valor;
