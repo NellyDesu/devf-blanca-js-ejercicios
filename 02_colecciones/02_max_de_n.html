@@ -16,8 +16,16 @@
     </div>
     <script>
 
-        function max_de_n(numeros) {
-          var maximo;
+        function max_de_n(numeros) { //interacion de coleciones
+          var maximo = 0;
+          for(i in numeros){
+            var n_actual = parseInt(numeros [i]);
+            if(n_actual > maximo){
+              maximo = n_actual;
+            }
+
+          }
+
 
           /*
             Ejercicio: `numeros` es un array de números. Usa un
