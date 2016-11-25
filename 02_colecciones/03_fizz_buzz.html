@@ -12,10 +12,7 @@
       <div id="resultado"></div>
     </div>
     <script>
-<<<<<<< HEAD
-=======
 
->>>>>>> ab16ebb5aac31f227f1f5ba1510f55ee3ed3e8ef
         function fizz_buzz(max) {
           /*
             Ejercicio:
@@ -26,40 +23,26 @@
               (3) Muestra "FizzBuzz" cada vez que el número sea divisible por
                   los dos 3 y 5.
            */
-<<<<<<< HEAD
+           /*for (var i = 1; i <= max; i++) {
+             var tres i % 3 == 0, cinco = 1 % 5 == 0;
+             print ()
+           }*/
+
           for (var i = 1; i <= max; i++) {
             if (((i % 5) == 0) && (( i % 3) == 0)) {
             print (" FizzBuzz", true);
-          }
-          else if ((i % 5) == 0) {
+          } else if ((i % 5) == 0) {
             print (" Buzz", true);
-          }
-          else if (( i % 3) == 0) {
+          } else if (( i % 3) == 0) {
             print (" Fizz", true);
-          }
-          else {
+          } else {
             print (i, true);
           }
         }
-        };
-        /*for (var i = 1; i <= 100; i++) {
-  var f = i % 3 == 0, b = i % 5 == 0;
-  print (f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
-}
-        };*/
+      };
 
-        // ******************************************
-        // No hay que cambiar nada de acá para abajo.
-        // ******************************************
-        function correr_fizz_buzz() {
-          fizz_buzz(100);
-        }
-=======
-          
-          for (var i = 0; i <= max; i++) {
-            print(i, true);
-          }
-        }
+
+
         // ******************************************
         // No hay que cambiar nada de acá para abajo.
         // ******************************************
@@ -68,7 +51,7 @@
           fizz_buzz(100);
         }
 
->>>>>>> ab16ebb5aac31f227f1f5ba1510f55ee3ed3e8ef
+
         function print(valor, append) {
           var resultado = document.querySelector("#resultado");
           if (append) {
@@ -77,10 +60,7 @@
             resultado.innerHTML = valor + "<br>";
           }
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> ab16ebb5aac31f227f1f5ba1510f55ee3ed3e8ef
     </script>
   </body>
 </html>
