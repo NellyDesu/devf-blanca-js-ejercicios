@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_recursos/main.css">
+    <title>Dev.F JS Ejercicios - Colecciones - 06. Tabla de multiplicar</title>
+  </head>
+  <body>
+    <h1>Tabla de multiplicar</h1>
+    <div class="formulario">
+      Mínimo: <input type="text" name="minimo" id="minimo"><br />
+      Máximo: <input type="text" name="maximo" id="maximo"><br />
+      <button onclick="dibujar_tabla();">Dibujar Tabla!</button>
+      <table id="resultado">
+         <tr>
+            <th id="primer_fila"></th>
+         </tr>
+         <tr id="primera_columna">
+           <td></td>
+         </tr>
+      </table>
+    </div>
+    <script>
+     var i, j;
+        function dibujar_tabla() {
+          var minimo = parseInt(document.querySelector("#minimo").value);
+          var maximo = parseInt(document.querySelector("#maximo").value);
+          for(i = minimo; i <= maximo; i++){
+            for(j = minimo; j <= maximo; j++){
+              print(j*i);
+            }
+          }
+          }
+           function print(v) {
+
+            var resultado = document.querySelector("#resultado");
+               resultado.innerHTML += v + " ";
+            /*var ires = document.querySelector("#primera_columna");
+               ires.innerHTML = i;
+            var jres = document.querySelector("#primer_fila");
+                  jres.innerHTML = j; */
+           }
+
+           function print(v) {
+
+            var resultado = document.querySelector("#resultado");
+               resultado.innerHTML += i + " x " + j +" = " + v + "<br>";
+            var ires = parseInt(document.querySelector("#primera_columna").value);
+               ires.innerHTML = i;
+            var jres = parseInt(document.querySelector("#primer_fila").value);
+                  jres.innerHTML = j;
+           }
+
+    </script>
+  </body>
+</html>
