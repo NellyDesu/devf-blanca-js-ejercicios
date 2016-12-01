@@ -15,8 +15,20 @@
     <script>
 
          function validar_codigo_postal() {
-           console.log("Validando Código Postal");
+
            var codigo_postal = document.querySelector("#codigo_postal").value;
+           var codigo_postal = document.querySelector("#pais").value;
+
+           if (pais == "México") {
+             validar_codigo_postal_5numeros(codigo_postal);
+           }else if (pais == "Alemania"){
+             validar_codigo_postal_5letras(codigo_postal);
+             }
+           }
+
+           function validar_codigo_postal_5numeros(codigo_postal); {
+             console.log("Validando Código Postal");
+
            var mensaje = "";
            if (isNaN(codigo_postal)){
              mensaje += "Código Postal Tiene Que Ser Un Número";
@@ -34,7 +46,7 @@
            console.log("No válido");
          }
 
-         
+
         var estados = {
           'México': [
               'Aguascalientes', 'Baja California', 'Baja California Sur',

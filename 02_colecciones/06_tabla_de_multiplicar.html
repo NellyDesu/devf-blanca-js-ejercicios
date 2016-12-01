@@ -23,15 +23,19 @@
     <script>
      var i, j;
         function dibujar_tabla() {
+          document.write("<table>");
           var minimo = parseInt(document.querySelector("#minimo").value);
           var maximo = parseInt(document.querySelector("#maximo").value);
           for(i = minimo; i <= maximo; i++){
+              document.write("<tr>");
              console.log(i);
             for(j = minimo; j <= maximo; j++){
+              document.write("<td>");
               console.log(j);
               print(i*j);
             }
           }
+          h
           }
            function print(v) {
             var resultado = document.querySelector("#resultado");
